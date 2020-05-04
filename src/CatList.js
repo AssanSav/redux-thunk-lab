@@ -1,10 +1,10 @@
 import React, { Component } from "react"
-import RenderPic from "./RenderPic"
+
 
 export default class CatList extends Component {
     
     render() {
-        const catPicUrl = () => this.props.catPics.map(catPic => <RenderPic key={catPic.id} picUrl={catPic.url}/>)
+        const catPicUrl = () => this.props.catPics.map(catPic => <img src={catPic.url} alt={catPic.id}></img>)
         return (
             <div>
                 {catPicUrl()}
